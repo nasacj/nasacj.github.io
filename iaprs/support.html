@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iAPRS Support</title>
+<style>
+  :root { color-scheme: light dark; --ink:#1b1f24; --soft:#5a6470; --line:#dde2e8; --accent:#0a84c6; --bg:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e6e9ec; --soft:#9aa4af; --line:#2c3238; --accent:#4fb6ee; --bg:#111416; } }
+  body { background: var(--bg); color: var(--ink); margin: 0;
+         font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 28px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  .meta { color: var(--soft); font-size: 14px; margin-bottom: 24px; }
+  hr { border: none; border-top: 2px solid var(--accent); margin: 48px 0 32px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>iAPRS Support</h1>
+<div class="meta"><a href="#zh">中文版本</a> · <a href="privacy">Privacy Policy</a></div>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:cj.nasa@gmail.com">cj.nasa@gmail.com</a>, or report a problem or suggest a feature at <a href="https://github.com/nasacj/iaprs/issues">github.com/nasacj/iaprs/issues</a> (needs a GitHub account). It helps to include your device, iOS version, how your radio is connected, and a screenshot.</p>
+
+<h2>Connecting your radio</h2>
+<h3>To receive</h3>
+<p>The reliable way is a USB sound card: run a 3.5&nbsp;mm audio cable from the radio's speaker or earphone output to the sound card's microphone input, and plug the sound card into your iPhone or iPad. Tap the microphone button on the map to start listening. Set the radio's volume so the audio is clearly audible but not distorted. Holding the phone next to the radio's speaker also works for a quick try, but is less reliable.</p>
+<p>APRS frequencies: 144.390&nbsp;MHz in North America, 144.800&nbsp;MHz in Europe, 144.640&nbsp;MHz in China; check your region's band plan elsewhere.</p>
+<h3>To transmit</h3>
+<p>Run the sound card's headphone output to the radio's microphone input and turn the radio's VOX on. In Settings → My Station enter your callsign and confirm you hold an amateur licence; iAPRS sends nothing until you do. Use the beacon panel's Test Tone to set the level, lowering it until the radio sounds clean, and raise TX Delay if the start of a packet is being cut off.</p>
+<h3>With a KISS TNC</h3>
+<p>Instead of audio, iAPRS can use a KISS TNC on your network, such as Dire Wolf on a computer or a Raspberry Pi (port 8001). Enter its address in Settings → Radio. The TNC then both receives and transmits.</p>
+
+<h2>Subscription</h2>
+<h3>How do I cancel or change my plan?</h3>
+<p>In iAPRS, open Settings → Manage Subscription, or on your device go to Settings → your name → Subscriptions. Cancel at least 24 hours before the end of the current period; you keep access until it ends.</p>
+<h3>I subscribed, but iAPRS asks me to subscribe again</h3>
+<p>Tap Restore Purchases on the subscription screen, signed in with the same Apple Account you subscribed with.</p>
+<h3>Refunds</h3>
+<p>Purchases are made through Apple, so refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h2>Other questions</h2>
+<h3>No stations appear</h3>
+<p>Check that the radio is on the APRS frequency for your region, that its squelch is open enough to pass packets, and that the input level shown while listening moves when a packet is heard. APRS is bursty: in a quiet area a station may beacon only every few minutes.</p>
+<h3>Does iAPRS upload what it hears?</h3>
+<p>No. Everything stays on your device. See the <a href="privacy">Privacy Policy</a>.</p>
+
+<hr>
+
+<h1 id="zh">iAPRS 支持</h1>
+<div class="meta"><a href="privacy#zh">隐私政策</a></div>
+
+<h2>联系方式</h2>
+<p>发邮件到 <a href="mailto:cj.nasa@gmail.com">cj.nasa@gmail.com</a>，或在 <a href="https://github.com/nasacj/iaprs/issues">github.com/nasacj/iaprs/issues</a> 报告问题、提出建议（需要 GitHub 账号）。最好附上你的设备型号、iOS 版本、电台的连接方式和截图。</p>
+
+<h2>连接电台</h2>
+<h3>接收</h3>
+<p>可靠的做法是用一个 USB 声卡：用 3.5mm 音频线把电台的扬声器或耳机输出接到声卡的麦克风输入，再把声卡插到 iPhone 或 iPad 上。点地图上的麦克风按钮开始收听。电台音量调到声音清楚但不失真。想先简单试试，也可以把手机放在电台喇叭旁边收听，但没那么可靠。</p>
+<p>APRS 频率：北美 144.390 MHz，欧洲 144.800 MHz，中国 144.640 MHz；其他地区请查当地的频率规划。</p>
+<h3>发射</h3>
+<p>把声卡的耳机输出接到电台的麦克风输入，并打开电台的声控（VOX）。在 设置 → My Station 里填写你的呼号，并确认你持有业余无线电执照；在此之前 iAPRS 不会发射任何信号。用信标面板里的 Test Tone（测试音）调整电平，调低到电台发出的声音干净为止；如果数据包开头被截掉，就调大 TX Delay（发射延时）。</p>
+<h3>使用 KISS TNC</h3>
+<p>除了音频，iAPRS 也可以使用你网络上的 KISS TNC，比如电脑或树莓派上运行的 Dire Wolf（端口 8001）。在 设置 → Radio 里填写它的地址，之后接收和发射都通过 TNC 进行。</p>
+
+<h2>订阅</h2>
+<h3>怎么取消或更换订阅方案？</h3>
+<p>在 iAPRS 里打开 设置 → Manage Subscription，或者在设备上打开 设置 → 你的名字 → 订阅。请在本期结束前至少 24 小时取消，取消后到本期结束前仍可使用。</p>
+<h3>已经订阅了，iAPRS 还让我订阅</h3>
+<p>在订阅页面点 Restore Purchases（恢复购买），并确认登录的是订阅时用的 Apple 账户。</p>
+<h3>退款</h3>
+<p>购买是通过苹果进行的，退款请到苹果的 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> 申请。</p>
+
+<h2>其他问题</h2>
+<h3>一个台站都没有</h3>
+<p>检查电台是否在你所在地区的 APRS 频率上，静噪是否开得足够让数据包通过，以及收听时显示的输入电平在收到数据包时有没有跳动。APRS 信号是间歇的：在台站少的地方，可能几分钟才有一个台站发信标。</p>
+<h3>iAPRS 会上传收到的内容吗？</h3>
+<p>不会。所有数据都保存在你的设备上。详见<a href="privacy#zh">隐私政策</a>。</p>
+
+</main>
+</body>
+</html>

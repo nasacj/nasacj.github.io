@@ -21,58 +21,80 @@
 <main>
 
 <h1>iAPRS Privacy Policy</h1>
-<div class="meta">Effective 28 September 2026 · <a href="#zh">中文版本</a></div>
+<div class="meta">Effective 26 October 2026 · <a href="#zh">中文版本</a></div>
 
-<p>iAPRS is a receive-only APRS client for iPhone and iPad. It decodes amateur-radio packets from the audio of a radio connected to, or held near, the device's microphone, and shows the stations it hears on a map and in a list. <strong>iAPRS collects no personal data, has no accounts, and sends nothing about you anywhere.</strong></p>
+<p>iAPRS is an APRS client for iPhone and iPad. It decodes amateur-radio packets from a radio connected to the device — through its audio input or a KISS TNC on your network — shows the stations it hears on a map and in a list, and can send your own position beacons and messages when you ask it to. <strong>iAPRS collects no personal data, has no accounts, and sends nothing about you to us or to any analytics, advertising or tracking service.</strong></p>
 
 <h2>Microphone</h2>
-<p>When you turn listening on, iAPRS reads the audio input to decode APRS packets. The audio is processed on the device as it arrives and is never recorded, stored or transmitted. Listening continues in the background only while you have turned it on.</p>
+<p>When you turn listening on, iAPRS reads the audio input to decode APRS packets. The audio is processed on the device as it arrives and is never recorded, stored or sent anywhere. Listening continues in the background only while you have turned it on.</p>
 
 <h2>Location</h2>
-<p>If you allow it, iAPRS uses your location to work out how far away each station is and in which direction. Your location is used on the device only; it is not stored beyond your settings, not shared, and not transmitted. You may instead enter a position by hand, or give none, in which case no distances are shown.</p>
+<p>If you allow it, iAPRS uses your location to work out how far away each station is and in which direction, and — only if you choose GPS as the source of your beacon — as the position your beacon reports. You may instead enter a position by hand, or give none, in which case no distances are shown. Your location is not sent to us or to any online service.</p>
+
+<h2>What you transmit on the radio</h2>
+<p>When you send a beacon or a message, iAPRS transmits it over amateur radio, through your radio or your KISS TNC. Like all APRS traffic, a transmission is public by design: it carries your callsign and, for a position beacon, your position at the precision you choose (exact, about 2 km or about 20 km), and anyone listening can receive it, as can internet gateways that pass APRS traffic on. iAPRS transmits nothing until you have entered your callsign and confirmed you hold an amateur licence; automatic beaconing is off unless you turn it on.</p>
 
 <h2>Data kept on your device</h2>
-<p>The stations, messages, objects, tracks and weather readings iAPRS decodes are saved in the app's own storage on your device, so they remain after a restart. Tracks and weather history are kept for 24 hours. You can delete any station, or everything, from within the app; deleting the app removes it all. This data is received over public amateur radio and never leaves your device.</p>
+<p>The stations, messages, objects, tracks and weather readings iAPRS decodes, and the messages you send, are saved in the app's own storage on your device, so they remain after a restart. They are kept until you delete them: you can delete any station, or everything, from within the app, and deleting the app removes it all. None of it is uploaded anywhere.</p>
 
 <h2>Network</h2>
-<p>The only network use is downloading map tiles from OpenFreeMap (tiles.openfreemap.org) so the map can be drawn. Like any web request, this exposes your IP address and the map area being viewed to that service; see <a href="https://openfreemap.org">openfreemap.org</a>. iAPRS sends no identifiers, location or usage data with these requests.</p>
+<p>iAPRS uses the network for three things only:</p>
+<ul>
+<li>Map tiles from OpenFreeMap (tiles.openfreemap.org) for the street map, and satellite imagery from Esri (server.arcgisonline.com) when you switch the map to satellite. Like any web request, these expose your IP address and the map area being viewed to that service; see <a href="https://openfreemap.org">openfreemap.org</a> and <a href="https://www.esri.com/en-us/privacy/overview">esri.com</a>. iAPRS sends no identifiers, location or usage data with them.</li>
+<li>A KISS TNC, such as Dire Wolf, at the address you enter in Settings — normally a computer on your own network.</li>
+<li>Apple's App Store, for the subscription (see below).</li>
+</ul>
+
+<h2>Subscription</h2>
+<p>The iAPRS subscription is sold and managed by Apple through your Apple Account. Apple handles the payment; iAPRS never sees your payment details, name or email. The app checks with Apple's StoreKit, on the device, whether a subscription is active. Apple's handling of this information is described in <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
 <h2>What iAPRS does not do</h2>
-<p>No analytics, no advertising, no tracking, no third-party SDKs that collect data, and no transmission of your callsign, position or packets. iAPRS does not transmit on the radio.</p>
+<p>No analytics, no advertising, no tracking, no third-party SDKs that collect data, and nothing sent to us. The only things that leave the device are the map requests above, and what you choose to transmit on the radio.</p>
 
 <h2>Children</h2>
 <p>iAPRS collects no data from anyone, including children.</p>
 
 <h2>Changes and contact</h2>
-<p>If this policy changes, the new version will be posted on this page with a new effective date. Questions: <a href="https://github.com/nasacj">github.com/nasacj</a>.</p>
+<p>If this policy changes, the new version will be posted on this page with a new effective date. Questions: <a href="mailto:cj.nasa@gmail.com">cj.nasa@gmail.com</a>, or open an issue at <a href="https://github.com/nasacj/iaprs/issues">github.com/nasacj/iaprs</a>. See also the <a href="support">support page</a>.</p>
 
 <hr>
 
 <h1 id="zh">iAPRS 隐私政策</h1>
-<div class="meta">生效日期：2026 年 9 月 28 日</div>
+<div class="meta">生效日期：2026 年 10 月 26 日</div>
 
-<p>iAPRS 是一个只接收的 APRS 客户端，适用于 iPhone 和 iPad。它从接在（或放在）手机麦克风旁边的电台的声音里解码业余无线电数据包，并把收到的台站显示在地图和列表上。<strong>iAPRS 不收集任何个人数据，没有账号，也不会把任何关于你的信息发送到任何地方。</strong></p>
+<p>iAPRS 是一个适用于 iPhone 和 iPad 的 APRS 客户端。它从接在设备上的电台解码业余无线电数据包——通过音频输入，或者通过你网络上的 KISS TNC——把收到的台站显示在地图和列表上，并在你要求时发送你自己的位置信标和消息。<strong>iAPRS 不收集任何个人数据，没有账号，不会把任何关于你的信息发送给我们，也不发送给任何统计、广告或跟踪服务。</strong></p>
 
 <h2>麦克风</h2>
-<p>当你开启监听时，iAPRS 读取音频输入来解码 APRS 数据包。音频在手机上实时处理，不会被录制、保存或发送。只有在你开启监听期间，App 才会在后台继续监听。</p>
+<p>当你开启监听时，iAPRS 读取音频输入来解码 APRS 数据包。音频在设备上实时处理，不会被录制、保存或发送到任何地方。只有在你开启监听期间，App 才会在后台继续监听。</p>
 
 <h2>位置</h2>
-<p>如果你允许，iAPRS 会使用你的位置来计算每个台站的距离和方位。位置只在手机上使用，除了你的设置之外不会保存，不会共享，也不会发送。你也可以手动输入位置，或者不提供位置，此时不显示距离。</p>
+<p>如果你允许，iAPRS 会使用你的位置来计算每个台站的距离和方位；并且只有当你选择用 GPS 作为信标的位置来源时，才会把它作为信标里报告的位置。你也可以手动输入位置，或者不提供位置，此时不显示距离。你的位置不会发送给我们，也不会发送给任何网络服务。</p>
 
-<h2>保存在手机上的数据</h2>
-<p>iAPRS 解码得到的台站、消息、物体、轨迹和气象读数，保存在 App 自己的存储空间里，重启后仍然保留。轨迹和气象历史保留 24 小时。你可以在 App 内删除任意台站或全部数据；删除 App 会清除所有数据。这些数据来自公开的业余无线电广播，不会离开你的手机。</p>
+<h2>你通过电台发射的内容</h2>
+<p>当你发送信标或消息时，iAPRS 会通过你的电台或 KISS TNC 在业余无线电频率上发射。和所有 APRS 信号一样，发射的内容本来就是公开的：它包含你的呼号；位置信标还包含你的位置，精度由你选择（精确、约 2 公里或约 20 公里）。任何正在收听的人都能收到，把 APRS 信号转发到互联网的网关也能收到。在你填好呼号并确认持有业余无线电执照之前，iAPRS 不会发射任何信号；自动发信标默认关闭，除非你自己打开。</p>
+
+<h2>保存在设备上的数据</h2>
+<p>iAPRS 解码得到的台站、消息、物体、轨迹和气象读数，以及你发送的消息，保存在 App 自己的存储空间里，重启后仍然保留，直到你删除为止。你可以在 App 内删除任意台站或全部数据；删除 App 会清除所有数据。这些数据不会上传到任何地方。</p>
 
 <h2>网络</h2>
-<p>唯一的网络访问是从 OpenFreeMap（tiles.openfreemap.org）下载地图瓦片来绘制地图。与所有网络请求一样，该服务会看到你的 IP 地址和所查看的地图区域；详见 <a href="https://openfreemap.org">openfreemap.org</a>。iAPRS 不会随这些请求发送任何标识、位置或使用数据。</p>
+<p>iAPRS 只在以下三种情况下使用网络：</p>
+<ul>
+<li>从 OpenFreeMap（tiles.openfreemap.org）下载街道地图；切换到卫星图时，从 Esri（server.arcgisonline.com）下载卫星影像。与所有网络请求一样，这些服务会看到你的 IP 地址和所查看的地图区域；详见 <a href="https://openfreemap.org">openfreemap.org</a> 和 <a href="https://www.esri.com/en-us/privacy/overview">esri.com</a>。iAPRS 不会随这些请求发送任何标识、位置或使用数据。</li>
+<li>连接你在设置里填写地址的 KISS TNC（比如 Dire Wolf），通常是你自己网络里的一台电脑。</li>
+<li>为订阅连接苹果的 App Store（见下文）。</li>
+</ul>
+
+<h2>订阅</h2>
+<p>iAPRS 的订阅由苹果通过你的 Apple 账户出售和管理。付款由苹果处理，iAPRS 看不到你的付款信息、姓名或邮箱。App 在设备上通过苹果的 StoreKit 确认订阅是否有效。苹果如何处理这些信息，见<a href="https://www.apple.com/legal/privacy/">苹果隐私政策</a>。</p>
 
 <h2>iAPRS 不做的事</h2>
-<p>没有统计分析，没有广告，没有跟踪，没有收集数据的第三方 SDK，也不会发送你的呼号、位置或数据包。iAPRS 不会通过电台发射。</p>
+<p>没有统计分析，没有广告，没有跟踪，没有收集数据的第三方 SDK，也不会发送任何东西给我们。离开设备的只有上面说的地图请求，以及你自己选择通过电台发射的内容。</p>
 
 <h2>儿童</h2>
 <p>iAPRS 不收集任何人的数据，包括儿童。</p>
 
 <h2>变更与联系</h2>
-<p>如本政策有变更，新版本会发布在本页并更新生效日期。如有问题：<a href="https://github.com/nasacj">github.com/nasacj</a>。</p>
+<p>如本政策有变更，新版本会发布在本页并更新生效日期。如有问题：<a href="mailto:cj.nasa@gmail.com">cj.nasa@gmail.com</a>，或在 <a href="https://github.com/nasacj/iaprs/issues">github.com/nasacj/iaprs</a> 提交 Issue。另见<a href="support">支持页面</a>。</p>
 
 </main>
 </body>
